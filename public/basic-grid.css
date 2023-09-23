@@ -1,0 +1,22 @@
+.basic-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.fit {
+    /* muito código */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+
+    /* otimizado porém muito fina */
+    /* grid-template-columns: repeat(12, 1fr); */
+
+    /* melhorado porém transborda a tela  */
+    /* grid-template-columns: repeat(12, minmax(240px, 1fr)); */
+
+    /* final */
+    grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
+}
+
+.fill {
+    grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+}
